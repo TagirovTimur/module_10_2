@@ -2,11 +2,13 @@ from time import sleep
 from datetime import datetime
 from threading import Thread
 
+
 class Knight(Thread):
-    def __init__(self,name, power):
+    def __init__(self, name, power):
         super().__init__()
         self.name = name
         self.power = power
+        
     def run(self):
         day = 0
         enemy = 100
@@ -17,6 +19,7 @@ class Knight(Thread):
             print(f"{self.name} сражается {day} дней(дня), осталось {enemy} воинов.", flush=True)
             sleep(1)
         print(f"{self.name} одержал победу спустя {day} дней(дня)!", flush=True)
+
 
 Knight1 = Knight('Sir Lancelot', 10)
 Knight2 = Knight("Sir Galahad", 20)
