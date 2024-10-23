@@ -14,9 +14,9 @@ class Knight(Thread):
         while enemy > 0:
             day += 1
             enemy = enemy - self.power
-            print(f"{self.name} сражается {day} дней(дня), осталось {enemy} воинов.")
+            print(f"{self.name} сражается {day} дней(дня), осталось {enemy} воинов.", flush=True)
             sleep(1)
-        print(f"{self.name} одержал победу спустя {day} дней(дня)!")
+        print(f"{self.name} одержал победу спустя {day} дней(дня)!", flush=True)
 
 Knight1 = Knight('Sir Lancelot', 10)
 Knight2 = Knight("Sir Galahad", 20)
